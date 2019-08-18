@@ -157,7 +157,7 @@ proc replacePlaceholderVar(view: View, indexOfViewInSuper: int, v: var Variable)
         v = view.layout.vars.height
 
 proc instantiateConstraint(v: View, c: var ConstraintWithPrototype) =
-    # Instantiate constrinat prototype and add it to the window
+    # Instantiate constraint prototype and add it to the window
     let ic = newConstraint(c.proto.expression, c.proto.op, c.proto.strength)
     let indexOfViewInSuper = v.superview.subviews.find(v)
     assert(indexOfViewInSuper != -1)
