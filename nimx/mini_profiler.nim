@@ -1,7 +1,7 @@
 import tables
 
 type
-    ProfilerDataSourceBase {.inheritable, pure.} = ref object
+    ProfilerDataSourceBase {.inheritable, pure.} = ref object of RootObj
         stringifiedValue: string
         updateImpl: proc(ds: ProfilerDataSourceBase) {.nimcall.}
         isDirty: bool
